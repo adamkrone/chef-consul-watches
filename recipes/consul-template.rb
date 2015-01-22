@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-service 'consul-template'
+service 'consul'
 
 consul_service_watch_def 'consul-template' do
   passingonly true

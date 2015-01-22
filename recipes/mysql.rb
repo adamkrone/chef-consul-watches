@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
-service 'mysql'
+service 'consul'
 
 consul_service_watch_def 'mysql' do
   passingonly true
