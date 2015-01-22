@@ -4,6 +4,8 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
+service 'mysql'
+
 consul_service_watch_def 'mysql' do
   passingonly true
   handler 'sudo service mysql restart'

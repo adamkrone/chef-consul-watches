@@ -4,6 +4,8 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 
+service 'apache2'
+
 consul_service_watch_def 'apache2' do
   passingonly true
   handler 'sudo service apache2 restart'
