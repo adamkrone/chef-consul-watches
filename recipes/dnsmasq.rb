@@ -7,4 +7,5 @@
 consul_service_watch_def 'dnsmasq' do
   passingonly true
   handler 'sudo service dnsmasq restart'
+  notifies :restart, "service[consul]", :delayed
 end

@@ -7,4 +7,5 @@
 consul_service_watch_def 'postgres' do
   passingonly true
   handler 'sudo service postgres restart'
+  notifies :restart, "service[consul]", :delayed
 end

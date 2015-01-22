@@ -7,4 +7,5 @@
 consul_service_watch_def 'lsyncd' do
   passingonly true
   handler 'sudo service lsyncd restart'
+  notifies :restart, "service[consul]", :delayed
 end

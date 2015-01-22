@@ -7,4 +7,5 @@
 consul_service_watch_def 'keepalived' do
   passingonly true
   handler 'sudo service keepalived restart'
+  notifies :restart, "service[consul]", :delayed
 end

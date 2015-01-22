@@ -7,4 +7,5 @@
 consul_service_watch_def 'cron' do
   passingonly true
   handler 'sudo service cron restart'
+  notifies :restart, "service[consul]", :delayed
 end

@@ -7,4 +7,5 @@
 consul_service_watch_def 'apache2' do
   passingonly true
   handler 'sudo service apache2 restart'
+  notifies :restart, "service[consul]", :delayed
 end
